@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task 1</title>
+</head>
+<body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <button id="sum" onClick="sum()">Sum</button>
+    <button id="subtract" onClick="subtract()">subtract</button>
+    <button id="divide" onClick="divide()"> divide</button>
+    <button id="multiply" onClick="multiply()">multiply</button>
+    <button id="all" onClick="printAllResult()">- + / *</button>
+
+    <h3>Result: <span id="result">0</span></h3>
+
+    <script>
+        function sum() {
+            var n1 =parseFloat( document.getElementById("number1").value),
+                n2 = parseFloat( document.getElementById("number2").value),
+                sum = n1 + n2;
+               result = document.getElementById("result");
+                   result.innerHTML = sum;
+            return sum
+
+        }
+
+        function subtract() {
+            var n1 =parseFloat( document.getElementById("number1").value),
+                n2 = parseFloat( document.getElementById("number2").value),
+                subtract = n1 - n2;
+            result = document.getElementById("result");
+            result.innerHTML = subtract;
+            return subtract
+
+        }
+
+        function divide() {
+            var n1 =parseFloat( document.getElementById("number1").value),
+                n2 = parseFloat( document.getElementById("number2").value),
+                divide = n1 / n2;
+            result = document.getElementById("result");
+            result.innerHTML = divide;
+            return divide
+        }
+
+        function multiply() {
+            var n1 =parseFloat( document.getElementById("number1").value),
+                n2 = parseFloat( document.getElementById("number2").value),
+                multiply = n1 * n2;
+            result = document.getElementById("result");
+            result.innerHTML = multiply;
+            return multiply
+        }
+
+        function printAllResult() {
+            document.getElementById('result').innerHTML="sum: " + sum()+"<br>"+ "subtract: " + subtract()+"<br>"+ "divide: " + divide()+"<br>"+" multiply: " + multiply();
+        }
+    </script>
+
+</body>
+</html>
