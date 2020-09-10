@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+
+        <h2 style="color:red">Football Points</h2>
+        <input type="number" id="wins">
+        <input type="number" id="draws">
+        <input type="number" id="losses">
+        <button id="points " onClick="printResult()">calculates </button>
+        <h3>footballPoints: <span id="result4"></span></h3>
+
+        <script>
+            function win() {
+                var wins = parseInt(document.getElementById("wins").value),
+                    n1 =  wins * 3;
+                return n1
+            }
+            function draw() {
+                var draws =parseInt(document.getElementById("draws").value),
+                    n2 = draws * 1;
+                return n2
+            }
+            function losse() {
+                var losses =parseInt(document.getElementById("losses").value),
+                    n3 =  losses * 0;
+                return n3
+            }
+            function printResult() {
+                document.getElementById("result4").innerHTML = win() +  draw() + losse();
+
+            }
+        </script>
+
+    </body>
+</html>

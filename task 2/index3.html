@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+    <h2 style="color:red">Upvotes vs Downvotes</h2>
+    <input type="number" id="up">
+    <input type="number" id="down">
+    <button id="calc" onClick="printResult(calculation())">calculated</button>
+    <h3>Result: <span id="result3"></span></h3>
+
+    <script>
+        function calculation() {
+            return   upvote() - downvote()
+        }
+        function upvote() {
+            var up =parseFloat( document.getElementById("up").value);
+            return up;
+        }
+
+        function downvote() {
+            var down =parseFloat( document.getElementById("down").value);
+            return down;
+        }
+
+        function printResult(result) {
+            document.getElementById("result3").innerText = result ;
+        }
+    </script>
+
+
+    </body>
+</html>

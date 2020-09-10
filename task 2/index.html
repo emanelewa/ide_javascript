@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task </title>
+</head>
+<body>
+
+    <h2 style="color:red">Convert Minutes into Seconds</h2>
+
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <input type="number" id="number3">
+    <button id="convert" onClick="printAllResult()">convert</button>
+    <h3>Result: <span id="result">0</span></h3>
+
+    <script>
+        function con1() {
+            var n1 =parseFloat( document.getElementById("number1").value);
+                return n1 * 60;
+        }
+        function con2() {
+            var n2 =parseFloat( document.getElementById("number2").value);
+            return n2 * 60;
+        }
+        function con3() {
+            var n3 =parseFloat( document.getElementById("number3").value);
+            return n3 * 60;
+        }
+
+        function printAllResult() {
+            document.getElementById('result').innerHTML="<br>" +
+                "convert : " + " " + con1() +"<br>" +
+                "convert : " + " " + con2() +"<br>" +
+                "convert : " + " " + con3() +"<br>" ;
+        }
+    </script>
+</body>
+</html>
